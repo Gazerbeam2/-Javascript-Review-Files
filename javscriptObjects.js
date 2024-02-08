@@ -232,10 +232,53 @@ for(let i = init; i <= (+init) + 9; i++){      ////Unary Plus Operator
   if(i % 2 === 0){
     console.log(`${i} is even`);
   } else console.log(`${i} is odd`);
-  s
 }
 
 _________________________________________________________________________________________
 
 /*3. Input Validation
 Write a program that continues to ask the user for a number until the entered number is less than or equal to 100. */
+let userGuess = 101;
+
+while(userGuess >= 100){
+  userGuess = prompt('Enter an integer .' ,200)
+}
+
+/*When you are done with the above, improve the program so that the teriminating number is between 50 and 100. */
+
+while(userGuess > 100 || userGuess < 50){
+  userGuess = prompt("Enter an integer.",0)
+}
+
+/* 4. Multiplication Table
+Write a program that asks the user for a number, then shows the multiplication table for this number. */
+
+let number = prompt("What times table do you want?", 0)
+
+for(let i = 1; i <= 10; i++){
+  let times = number * i
+  console.log(`${number} * ${i} = ${times}`)
+}
+
+/* Whe you are done, improve the program so it only accepts numbers between 2 and 9 (use the previous exercise as a blueprint).*/
+
+let userInput = 0;
+
+while(userInput < 2 || userInput > 9 ){
+  userInput = prompt('Enter an integer', 0)
+}
+
+for(let i = 1; i <= 10; i++){
+  let times = userInput * i
+  console.log(`${userInput} * ${i} = ${times}`)
+}
+
+/*5. Neither yes nor no
+Write a program that plays "neither yes, nor no" with the user. Specifically, the programs asks the user to enter text until either "yes" or "no" is typed, which ends the game. */
+
+let userWord = ''
+
+while(userWord !== "yes" && userWord !== "no"){
+  userWord = prompt("Enter a word?");
+
+}
