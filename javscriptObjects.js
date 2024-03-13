@@ -154,7 +154,7 @@ function printFives(max){
 
   if(i < max) {
       i+=5;}
-
+  }
 function printFives(max){
     for (let i = 0; i<max;i+= 5){
       console.log(i);
@@ -278,7 +278,41 @@ Write a program that plays "neither yes, nor no" with the user. Specifically, th
 
 let userWord = ''
 
-while(userWord !== "yes" && userWord !== "no"){
+while(!(userWord === "no" || userWord === "yes")){
   userWord = prompt("Enter a word?");
 
 }
+
+/*6. FizzBuzz
+
+Write a program that shows all numbers betwee 1 and 100 with the following exceptions: It shows "Fizz" instead if the number is divisible by 3. It shows "Buzz" instead if the number is  divisible by 5 and not by 3. */
+
+for(let i = 1; i <= 100; i++){
+  if(i % 3 === 0){
+    console.log(`${i} is fizz`)
+} else if(i % 5 === 0){
+  console.log(`${i} is buzz`);
+}
+  else{
+    console.log(`${i}`);
+  }
+}
+
+/* When it's done, improve it so that the program shows "FizzBuzz" instead of numbers divisible both by 3 and by 5. */
+
+for(let i = 1; i <=100; i++){
+  if((i % 3 ===0) && (i % 5 === 0)){
+    console.log(`${i} is fizzbuzz`);
+  }else if (i % 3 === 0){
+    console.log(`${i} is fizz`){
+    }else if( i % 5 === 0){
+      console.log(`${i} is buzz`);
+    }else{
+      console.log(`${i}`)
+    }
+  }
+}
+
+/*EXTRA STUFF*/
+
+/*Shortening conditional statements -
